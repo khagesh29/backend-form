@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+            background-size: 800% 800%;
+            animation: gradientMove 20s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.15); /* translucent white */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            width: 350px;
+            text-align: center;
+            backdrop-filter: blur(8px); /* glass effect */
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #eee;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.25);
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            border-color: #fff;
+            box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        input[type="submit"] {
+            background: #ffffffcc;
+            color: #333;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #ffffffee;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2><i>Student Details Form</i></h2>
+        <form action="index.php" method="POST">
+            <label for="suc_code">Student Code:</label>
+            <input type="text" name="suc_code" required>
+
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+
+            <label for="phone_no">Phone Number:</label>
+            <input type="text" name="phone_no" required>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
